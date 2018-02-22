@@ -11,18 +11,18 @@ pipeline {
    }
    stage('build') {
      steps {
-       sh 'mvn clean compile'
+       sh '/usr/share/maven/bin/mvn clean compile'
      }
    }
    stage('Test') {
      steps {
-       sh 'mvn test'
+       sh '/usr/share/maven/bin/mvn test'
        junit '**/target/surefire-reports/Test-*.xml'
      }
    }
    stage('Package') {
      steps {
-       sh 'mvn package'
+       sh '/usr/share/maven/bin/mvn package'
      }
    }
   }
