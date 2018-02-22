@@ -17,7 +17,6 @@ pipeline {
    stage('Test') {
      steps {
        sh '/usr/share/maven/bin/mvn test'
-       junit '**/target/surefire-reports/Test-*.xml'
      }
    }
    stage('Package') {
