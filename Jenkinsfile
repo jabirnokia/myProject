@@ -22,7 +22,7 @@ pipeline {
    stage('Package') {
      steps {
        sh '/usr/share/maven/bin/mvn package'
-       archiveArtifact artifacts: 'target/*.jar', fingerprint: true
+       archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
      }
    }
   }
